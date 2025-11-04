@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Preparing Assetto Corsa Download...</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+<a class="back-button" href="index.html">⬅ Back to Home</a>
+<div class="thank-card">
+  <img class="game-image" src="img/Assetto Corsa.png" alt="Assetto Corsa" />
+  <div class="title" style="font-size:20px;font-weight:800;color:var(--neon);margin-top:10px">Assetto Corsa</div>
+  <div class="sub" style="color:rgba(234,246,255,0.8);margin-top:6px">Platform: <span id="platform">Android</span></div>
+  <div class="countdown" id="countNum">6</div>
+  <button id="downloadBtn" class="btn" style="display:none;margin-top:14px">Download Now</button>
+  <div style="margin-top:12px;color:rgba(234,246,255,0.6)">Please complete one offer to unlock the download.</div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const os = (params.get('os') || 'android').toLowerCase();
+document.getElementById('platform').textContent = os==='ios'?'iOS':'Android';
+let t = 6;
+const num = document.getElementById('countNum');
+const btn = document.getElementById('downloadBtn');
+const locker = "https://applocked.org/cl/i/m52d28";
+const timer = setInterval(()=>{ t--; num.textContent = t>0?t:'✔'; if(t<=0){ clearInterval(timer); num.style.display='none'; btn.style.display='inline-block'; } },1000);
+btn.addEventListener('click', ()=>{ window.location.href = locker; });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>apsgemes | Download Mobile Games</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" type="image/x-icon" href="img/logo set.png">
+</head>
+<body>
+<header class="header-center">
+  <div class="logo-block">
+    <img src="img/aps_logo.png" alt="apsgemes Logo" class="logo-img">
+    <h1 class="logo-text">apsgemes</h1>
+    <input type="text" class="search-bar" placeholder="Search for a game...">
+  </div>
+</header>
+
+
+
+<main class="games-grid">
+  <article class="game-card" data-name="GTA 5 Mobile">
+    <img src="img/gtav.png" alt="GTA 5 Mobile" />
+    <div class="card_meta">
+      <div class="game-title">GTA 5 Mobile</div>
+      <div class="game-desc">Exciting mobile game — optimized for mobile.</div>
+      <button class="btn" onclick="openChoose('GTA5Mobile','GTA 5 Mobile')">Download</button>
+    </div>
+  </article>
+
+  <article class="game-card" data-name="BeamNG.drive">
+    <img src="img/BeamNG.drive.png" alt="BeamNG.drive" />
+    <div class="card_meta">
+      <div class="game-title">BeamNG.drive</div>
+      <div class="game-desc">Exciting mobile game — optimized for mobile.</div>
+      <button class="btn" onclick="openChoose('BeamNGdrive','BeamNG.drive')">Download</button>
+    </div>
+  </article>
+
+  <article class="game-card" data-name="Assetto Corsa">
+    <img src="img/Assetto Corsa.png" alt="Assetto Corsa" />
+    <div class="card_meta">
+      <div class="game-title">Assetto Corsa</div>
+      <div class="game-desc">Exciting mobile game — optimized for mobile.</div>
+      <button class="btn" onclick="openChoose('AssettoCorsa','Assetto Corsa')">Download</button>
+    </div>
+  </article>
+
+  <article class="game-card" data-name="BASEBALL 9">
+    <img src="img/BASEBALL 9.png" alt="BASEBALL 9" />
+    <div class="card_meta">
+      <div class="game-title">BASEBALL 9</div>
+      <div class="game-desc">Exciting mobile game — optimized for mobile.</div>
+      <button class="btn" onclick="openChoose('BASEBALL','BASEBALL 9')">Download</button>
+    </div>
+  </article>
+
+  <article class="game-card" data-name="Forza Horizon 5">
+    <img src="img/Forza Horizon 5.png" alt="Forza Horizon 5" />
+    <div class="card_meta">
+      <div class="game-title">Forza Horizon 5</div>
+      <div class="game-desc">Exciting mobile game — optimized for mobile.</div>
+      <button class="btn" onclick="openChoose('ForzaHorizon','Forza Horizon 5')">Download</button>
+    </div>
+  </article>
+
+</main>
+
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <div id="popupTitle" style="font-weight:800;color:var(--neon);margin-bottom:8px">Choose your device</div>
+    <div style="color:rgba(234,246,255,0.85);margin-bottom:12px">Select Android or iOS to continue</div>
+    <div><button class="os-btn" onclick="choose('android')">Android</button><button class="os-btn" onclick="choose('ios')">iOS</button></div>
+    <div style="margin-top:10px"><button onclick="closePopup()" style="background:none;border:none;color:var(--neon);cursor:pointer">Cancel</button></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
